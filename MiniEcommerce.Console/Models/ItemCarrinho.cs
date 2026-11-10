@@ -1,5 +1,8 @@
 namespace MiniEcommerce.Console.Models;
 
+/// <summary>
+/// Representa uma linha de item dentro do carrinho de compras.
+/// </summary>
 public class ItemCarrinho
 {
     public Produto Produto { get; set; }
@@ -14,5 +17,8 @@ public class ItemCarrinho
         Quantidade = quantidade;
     }
 
+    /// <summary>
+    /// Subtotal calculado com base no preço unitário do produto e na quantidade.
+    /// </summary>
     public decimal Subtotal => Produto.Preco * Quantidade;
 }

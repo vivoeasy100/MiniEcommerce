@@ -3,6 +3,9 @@ namespace MiniEcommerce.Console.Models;
 using System.Globalization;
 using System.Text;
 
+/// <summary>
+/// Representa um pedido consolidado, processando a baixa de estoque e o fechamento financeiro.
+/// </summary>
 public class Pedido
 {
     public int Id { get; set; }
@@ -23,6 +26,10 @@ public class Pedido
         ValorTotal = valorTotal;
     }
 
+    /// <summary>
+    /// Processa o fechamento do pedido (checkout), validando a disponibilidade de estoque,
+    /// efetuando a baixa automática de cada item e limpando o carrinho de compras.
+    /// </summary>
     public static Pedido FecharPedido(int id, CarrinhoDeCompras carrinho)
     {
         if (carrinho == null)
@@ -66,6 +73,9 @@ public class Pedido
         return pedido;
     }
 
+    /// <summary>
+    /// Gera um resumo formatado e amigável da compra para exibição ao usuário.
+    /// </summary>
     public virtual string GerarResumo()
     {
         var sb = new StringBuilder();

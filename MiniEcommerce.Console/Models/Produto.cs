@@ -1,5 +1,8 @@
 namespace MiniEcommerce.Console.Models;
 
+/// <summary>
+/// Representa um produto no catálogo e controla as operações diretas sobre seu estoque.
+/// </summary>
 public class Produto
 {
     public int Id { get; set; }
@@ -26,6 +29,9 @@ public class Produto
         QuantidadeEstoque = quantidadeEstoque;
     }
 
+    /// <summary>
+    /// Deduz uma quantidade do estoque do produto, garantindo saldo suficiente.
+    /// </summary>
     public virtual void DeduzirEstoque(int quantidade)
     {
         if (quantidade <= 0)
@@ -37,6 +43,9 @@ public class Produto
         QuantidadeEstoque -= quantidade;
     }
 
+    /// <summary>
+    /// Adiciona uma quantidade de reposição ao estoque do produto.
+    /// </summary>
     public virtual void AdicionarEstoque(int quantidade)
     {
         if (quantidade <= 0)

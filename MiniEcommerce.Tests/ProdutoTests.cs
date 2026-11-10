@@ -82,3 +82,4 @@ public class ProdutoTests
         Assert.Equal(produto, catalogo.ObterPorId(1));
     }
 }
+

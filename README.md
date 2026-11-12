@@ -3,7 +3,9 @@
 Aplicação de console para simulação de um e-commerce desenvolvida em **.NET / C#** com foco em **Garantia da Qualidade de Software**, seguindo as práticas de **TDD (Test-Driven Development)** e o padrão **Conventional Commits**.
 
 ---
-
+👨‍🎓 Identificação do Aluno
+Nome: Fernando Almeida
+RA: 326132695
 ## 📋 Contexto Acadêmico
 
 - **Disciplina:** Garantia da Qualidade de Software / Gestão e Qualidade de Software
